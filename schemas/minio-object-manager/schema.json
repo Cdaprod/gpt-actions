@@ -1,0 +1,41 @@
+{
+  "info": {
+    "title": "MinIO Object Manager",
+    "description": "Manages CRUD operations on objects in a MinIO bucket.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:9000" // Replace with your MinIO server URL
+    }
+  ],
+  "paths": {
+    "/{bucketName}/{objectName}": {
+      "put": {
+        "description": "Uploads an object to the specified bucket.",
+        "operationId": "uploadObject",
+        "parameters": [
+          // Define parameters for bucketName, objectName, and file details
+        ],
+        "responses": {
+          "200": {
+            "description": "Object uploaded successfully"
+          }
+        }
+      },
+      "get": {
+        "description": "Downloads an object from the specified bucket.",
+        "operationId": "downloadObject",
+        // Define parameters and response structure
+      },
+      "delete": {
+        "description": "Deletes an object from the specified bucket.",
+        "operationId": "deleteObject",
+        // Define parameters and response structure
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
